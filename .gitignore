@@ -1,1 +1,63 @@
+# ------------------------------------------------------------------
+# SECURITY NOTICE: CORE DSE ARTIFACTS
+# Prevent committing proprietary build and simulation results.
+# ------------------------------------------------------------------
+# VHDL Synthesis and Simulation Outputs (Proprietary)
+/build/
+/synthesize/
+/sim/
+*.syn
+*.jou
+*.log
+*.rpt
+/src/*.o
+/src/*.a
 
+# Temporary Fixed-Point Model Generation (Kimbrough Core IP)
+/models/*.tmp
+/models/*.dat
+/models/*.bin
+*.fpt # Fixed-Point Table outputs
+
+# ------------------------------------------------------------------
+# OPERATING SYSTEM AND ENVIRONMENT
+# ------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.cache/
+.project
+.idea/
+.vscode/
+
+# ------------------------------------------------------------------
+# PYTHON (for simulation/plotting scripts)
+# ------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# ------------------------------------------------------------------
+# LOGS AND TEMP DATA
+# ------------------------------------------------------------------
+*.log
+*.swp
+*.bak
+*~
+
+# ------------------------------------------------------------------
+# DOCUMENTATION AND MEDIA (Exclusions)
+# Keep final PNGs, but ignore temporary graphics/media.
+# ------------------------------------------------------------------
+# Ignore all large video files that might be generated from simulations
+*.mp4
+*.avi
+*.mov
+
+# ------------------------------------------------------------------
+# COMPRESSED ARCHIVES (Often contain temporary or large files)
+# ------------------------------------------------------------------
+*.zip
+*.tar
+*.rar
