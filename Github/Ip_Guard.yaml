@@ -1,0 +1,119 @@
+manifest_version: 1.0
+canonical_name: QSOL-Directory-Manifest
+governance_tier: constitutional
+ingestion_ritual: GENESIS
+lineage_anchor: directory-manifest.merkle
+
+directories:
+
+  # ============================
+  # 1. CONSTITUTIONAL ARTIFACTS
+  # ============================
+  goldschmidt/:
+    role: constitutional-math-core
+    governance_tier: tier-1
+    steward_class: QSOL-Architects
+    witness_class: QSOL-ZKP-Witnesses
+    ingestion_rule: seal-and-attest
+    privacy_boundary: high
+    canonical_anchor: goldschmidt.root
+
+  oracle/:
+    role: sovereign-oracle-kernel
+    governance_tier: tier-1
+    steward_class: QSOL-Architects
+    witness_class: QSOL-ZKP-Witnesses
+    ingestion_rule: seal-and-attest
+    privacy_boundary: high
+    canonical_anchor: oracle.root
+
+  kernel/:
+    role: stateless-governed-kernel
+    governance_tier: tier-1
+    steward_class: QSOL-Architects
+    witness_class: QSOL-ZKP-Witnesses
+    ingestion_rule: seal-and-attest
+    privacy_boundary: high
+    canonical_anchor: kernel.root
+
+  stabilizer/:
+    role: dse-kimbrough-stabilizer
+    governance_tier: tier-1
+    steward_class: QSOL-Architects
+    witness_class: QSOL-ZKP-Witnesses
+    ingestion_rule: seal-and-attest
+    privacy_boundary: high
+    canonical_anchor: stabilizer.root
+
+  # ============================
+  # 2. GOVERNANCE ARTIFACTS
+  # ============================
+  governance/:
+    role: institutional-governance
+    governance_tier: tier-2
+    steward_class: QSOL-Governance
+    ingestion_rule: governed-ingest
+    privacy_boundary: medium
+    canonical_anchor: governance.root
+
+  manifests/:
+    role: manifest-registry
+    governance_tier: tier-2
+    steward_class: QSOL-Governance
+    ingestion_rule: governed-ingest
+    privacy_boundary: medium
+    canonical_anchor: manifests.root
+
+  schemas/:
+    role: schema-authority
+    governance_tier: tier-2
+    steward_class: QSOL-Governance
+    ingestion_rule: governed-ingest
+    privacy_boundary: medium
+    canonical_anchor: schemas.root
+
+  rituals/:
+    role: ritual-definitions
+    governance_tier: tier-2
+    steward_class: QSOL-Governance
+    ingestion_rule: governed-ingest
+    privacy_boundary: medium
+    canonical_anchor: rituals.root
+
+  # ============================
+  # 3. OPERATIONAL ARTIFACTS
+  # ============================
+  .github/workflows/:
+    role: operational-automation
+    governance_tier: tier-3
+    steward_class: QSOL-Operations
+    ingestion_rule: operational-ingest
+    privacy_boundary: low
+    canonical_anchor: workflows.root
+
+  scripts/:
+    role: operational-scripts
+    governance_tier: tier-3
+    steward_class: QSOL-Operations
+    ingestion_rule: operational-ingest
+    privacy_boundary: low
+    canonical_anchor: scripts.root
+
+  docs/:
+    role: institutional-documentation
+    governance_tier: tier-3
+    steward_class: QSOL-Operations
+    ingestion_rule: operational-ingest
+    privacy_boundary: low
+    canonical_anchor: docs.root
+
+  # ============================
+  # 4. CATCH-ALL
+  # ============================
+  "*":
+    role: unclassified-artifact
+    governance_tier: tier-3
+    steward_class: QSOL-Operations
+    ingestion_rule: operational-ingest
+    privacy_boundary: low
+    canonical_anchor: misc.root
